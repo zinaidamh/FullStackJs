@@ -42,7 +42,6 @@ const user3 = {
  isAdmin: false
 }
 
-
 const user4 = {
  age: 27,
  paid: false,
