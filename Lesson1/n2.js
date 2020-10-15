@@ -1,6 +1,5 @@
 //Написать функцию для подсчета количества букв в слове
 
-
 var charCount=function(text){
   var new_text=text.replace(/[\.//;,!?;+-=]*/g, '');
   return new_text.length;
