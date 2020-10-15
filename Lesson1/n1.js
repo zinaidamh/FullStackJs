@@ -1,6 +1,7 @@
 1  var x = 6, y = 15, z = 4; 
 y /= x + 5 % z; 
 
+
 The same as:
 
 y=y / (x + (5%z))
