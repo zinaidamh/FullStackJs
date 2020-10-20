@@ -1,31 +1,19 @@
-<!DOCTYPE html>
-<html>
-<body>
 
-<p>Creating a JavaScript Object.</p>
+//Реализовать функцию, которая принимает текст, и возвращает массив объектов со структурой { word: //'smth', length: 1, isCapitalized: false}
 
-<p id="demo"></p>
 
-<script>
-//{ word: 'smth', length: 1, isCapitalized: false}
 
-//console.log('begin')
+function textToArray(txt)
+{
+  const txtArray = txt.split(" ")
+  //console.log(txtArray)
+  const objArray = txtArray.map(checkWord)
+  //console.log(objArray)
+  return objArray 
+  
+  
+}
 
-                       
-const newObj=
-      Object.create(
-
-  { 
-    word: 'smth', 
-    length: 1, 
-    isCapitalized: false
-  }
-)
-//console.log(newObj.word);
-//console.log(newObj.length);
-//console.log(newObj.isCapitalized);
-
-//document.getElementById("demo").innerHTML = newObj.word
 
 function checkWord(word)
 {
@@ -38,25 +26,20 @@ function checkWord(word)
  // console.log(isUpper)
   
 var obj=
-      Object.create(
+     
 
   { 
-    word: 'smth', 
-    length: 1, 
-    isCapitalized: false
+    word:  word, 
+    length: word.length, 
+    isCapitalized: isUpper
   }
-)
-   
-  // console.log(obj.isCapitalized)
-//document.getElementById("demo").innerHTML = newObj.word
+
+//console.log(obj)   
+
 return obj
   
 }
-//newObj=checkWord("Hello word")
-document.getElementById("demo").innerHTML = 'test='+ newObj.word
 
 
-</script>
-
-</body>
-</html>
+const objArray= textToArray("Hello world. I love Java Script")
+objArray.forEach((item)=>console.log(item))
