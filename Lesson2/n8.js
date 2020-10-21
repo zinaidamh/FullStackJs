@@ -19,11 +19,11 @@ const human =
 {
    firstName: 'Alex',
    lastName : 'Smith',
-   get fullname()
+   get fullName()
    {
       return `${this.firstName} ${this.lastName} `  
    },
-   set fullname(value)
+   set fullName(value)
    {
       let arr = value.split(" ")
       this.firstName=arr[0]
