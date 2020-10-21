@@ -1,5 +1,6 @@
 ////Есть массив сотрудников компании
-const employees = [
+const employees = 
+[
     {
      firstName: 'Alex',
      lastName: 'Smith',
@@ -28,13 +29,14 @@ const employees = [
 //2. Отсортировать сотрудников по зарплате
 //3. Получить список сотрудников с зарплатой >4500 и возрастом > 25 лет
 
-function reducer (accumulator, item) {
+function reducer (accumulator, item) 
+{
   return accumulator + item.salary;
 }
 
 function sortSalary(arr)
 {
-   return arr.sort((a,b)=>  a.salary - b.salary)
+  return arr.sort((a,b)=>  a.salary - b.salary)
 }
 
 const sum = employees.reduce(reducer, 0); 
@@ -47,13 +49,3 @@ for(let o of ordEmp)
 {
 console.log(o.firstName+' '+o.lastName + ": " + o.salary)
 }
-
-console.log("=======================")
-console.log("Employees filtered by age>25 and salary>4500: ");
-const filtEmp=employees.filter((item)=>item.salary>4500 && item.age>25)
-
-for(let o of filtEmp)
-{
-console.log(o.firstName+' '+o.lastName + ": " + o.salary)
-}
-
