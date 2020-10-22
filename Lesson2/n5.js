@@ -44,5 +44,15 @@ const sum = employees.reduce(reducer, 0);
 console.log("Average salary: "+ Math.round(sum/employees.length))
 console.log("Employees sorted by salary: ");
 const ordEmp = sortSalary(employees)
+for(let o of ordEmp)
+{
+ console.log(o.firstName+' '+o.lastName + ": " + o.salary)
+}
+console.log("Employees filtered by age>25 and salary>4500: ");
 const filtEmp=employees.filter((item)=>item.salary>4500 && item.age>25)
+
+for(let o of filtEmp)
+{
+ console.log(o.firstName+' '+o.lastName + ": " + o.salary)
+}
 
