@@ -30,6 +30,7 @@ function cache()
 }
 
 const calculate = cache();
-calculate(3, 3); // { value: 27, fromCache: false}
-calculate(2, 10); // { value: 1024, fromCache: false}
-calculate(2, 10); // { value: 1024, fromCache: true}
+calculate(3, 3); // " value: 27, fromCache: false "
+calculate(2, 10); // " value: 1024, fromCache: false "
+calculate(2, 10); // " value: 1024, fromCache: true "
+
